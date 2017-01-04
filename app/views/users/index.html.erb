@@ -1,0 +1,23 @@
+<h1>Hello, <%= @user.user_id %>!</h1>
+
+<p>
+  <strong>Full Name: </strong><%= @user.name %></br>
+  <strong>Street Address: </strong><%= @user.address %></br>
+  <strong>City: </strong><%= @user.city %></br>
+  <strong>State: </strong><%= @user.state %></br>
+  <strong>Postal Code: </strong><%= @user.postal_code %></br>
+  <strong>Country: </strong><%= @user.country %></br>
+  <strong>Email: </strong><%= @user.email %></br>
+
+  <% if @empty_string.strip.empty? %>
+    <strong><%= "No Phones!" %></strong>
+  <% else %>
+    <% @phones.each do |phone|%>
+      <% if !(phone.number == "") %>
+        <strong><%= "#{phone.description}: "%></strong>
+        <%= phone.number%></br>
+      <% end %>
+    <% end %>
+  <% end %>
+
+</p>

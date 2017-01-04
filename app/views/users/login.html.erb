@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+
+<%= flash.now[:alert] %></br></br>
+
+<form action="/users/login" method="get">
+  <label for="user_id">Enter your User ID:</label></br>
+  <input type="text" name="user_id" placeholder="User ID"/></br></br>
+  <label for="password">Enter your Password:</label></br>
+  <input type="text" name="password" placeholder="Password"/></br></br>
+  <input type="submit" value="Login" />
+</form>

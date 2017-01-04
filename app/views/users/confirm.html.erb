@@ -1,0 +1,22 @@
+<h1>Confirmation Page</h1>
+
+You have successfully registered!
+<p>
+  <strong>Full Name: </strong><%= @user.name %></br>
+  <strong>Street Address: </strong><%= @user.address %></br>
+  <strong>City: </strong><%= @user.city %></br>
+  <strong>State: </strong><%= @user.state %></br>
+  <strong>Postal Code: </strong><%= @user.postal_code %></br>
+  <strong>Country: </strong><%= @user.country %></br>
+  <strong>Email: </strong><%= @user.email %></br>
+
+  <% @phones.each do |phone|%>
+    <%if !(phone.number == "") %>
+      <strong><%= "#{phone.description}: "%></strong>
+      <%= phone.number%></br>
+    <% end %>
+  <% end %>
+
+  <strong>User ID: </strong><%= @user.user_id %></br>
+  <strong>Password: </strong><%= @user.password %></br>
+</p>
